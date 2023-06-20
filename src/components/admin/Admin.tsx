@@ -16,10 +16,6 @@ const Admin = () => {
     } else
     setUserEmail(userString);
   }, []);
-  const logout =()=>{
-    localStorage.clear();
-    navigate('/login') 
-  }
     return (
 <div className={styles.admin}>
       <motion.div  className={styles.navbar}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import styles from "./Pagination.module.scss";
 type Props={
     currentPage:number;

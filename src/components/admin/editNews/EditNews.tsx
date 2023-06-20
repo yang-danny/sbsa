@@ -80,6 +80,10 @@ const EditNews = () => {
             setUploadProgress(0)
             setContent('');
           };
+          const handleInit = (evt, editor) => {
+            editorRef.current = editor;
+            console.log(evt);
+          };
   return (
     <>  {isLoading && <Loader />}
     <motion.div className={styles.addNews}
@@ -125,7 +129,7 @@ const EditNews = () => {
           <label>News text:</label>
           <Editor
         apiKey='9x16gq12hrxuygls5fyzao3611inw5omf5yx6pl5twbor2ce'
-        onInit={(evt, editor) => editorRef.current= editor }
+        onInit={handleInit }
         value={content}
         onEditorChange={handleEditorChange}
         init={{

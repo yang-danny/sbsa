@@ -17,7 +17,7 @@ const Login = () => {
           e.preventDefault();
           setIsLoading(true);
           signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+    .then(() => {
           setIsLoading(false);
           toast.success("Login Successful...");
           localStorage.setItem('user', JSON.stringify(email));

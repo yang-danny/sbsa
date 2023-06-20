@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.scss';
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Cards from 'react-credit-cards-2';
+import Cards, { Focused } from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/lib/styles.scss';
 import useLocalStorage from "use-local-storage";
 
@@ -78,7 +78,7 @@ const Donate = () => {
        expiry={state.expiry}
        cvc={state.cvc}
        name={state.name}
-      focused={state.focus}
+      focused={state.focus as Focused}
       />
       <form >
         <div className={styles.formGroup}>

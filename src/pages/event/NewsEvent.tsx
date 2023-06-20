@@ -32,7 +32,7 @@ const NewsEvent = () => {
                  <p>No News found</p>
                ) : (
                 <div className={styles.grid}>
-                       {slicedNews.map((publish, index) => {
+                       {slicedNews.map((publish) => {
                         const {id, title, imageURL,createdAt} = publish;
                           return (
                             <div  className={styles.gridItem} key={id}>

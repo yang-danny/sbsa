@@ -48,12 +48,14 @@ const AddNews = () => {
         e.preventDefault();
         setIsLoading(true);
         try {
+          // @ts-ignore
           const docRef = addDoc(collection(db, "news"), {
             title: newsTitle,
             imageURL: newsImg,         
             newsText: editorRef.current.getContent(),
             createdAt: Timestamp.now().toDate(),
           });
+        
           setIsLoading(false);
           setUploadProgress(0);
           navigate("/admin/publishedNews");
@@ -70,6 +72,10 @@ const AddNews = () => {
             setNewsImg('')
             setUploadProgress(0)
             setContent('');
+          };
+          const handleInit = (evt, editor) => {
+            editorRef.current = editor;
+            console.log(evt);
           };
   return (
     <>  {isLoading && <Loader />}
@@ -116,7 +122,7 @@ const AddNews = () => {
           <label>News text:</label>
           <Editor
         apiKey='9x16gq12hrxuygls5fyzao3611inw5omf5yx6pl5twbor2ce'
-        onInit={(evt, editor) => editorRef.current= editor }
+        onInit={handleInit}
         value={content}
         onEditorChange={handleEditorChange}
         init={{
