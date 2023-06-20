@@ -1,0 +1,23 @@
+.search {
+    position: relative;
+    flex: 1;
+  
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 1.5rem;
+      transform: translateY(-50%);
+    }
+  
+    input[type="text"] {
+      font-size: 1rem;
+      font-weight: 300;
+      padding: 0.8rem 3rem;
+      width: 50%;
+      color: #54008A;
+      border: 1px solid #EAEAE8;
+      border-radius: 1rem;
+      outline: none;
+      background-color: #fff;
+    }
+  }

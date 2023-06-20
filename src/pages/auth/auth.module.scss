@@ -1,0 +1,102 @@
+.auth {
+  width: 100%;
+  max-width: 1000px; 
+  flex-direction: column;
+  margin: 2rem auto;
+  .card{
+display: flex;
+background-color: rgb(151,120,209);
+border-radius: 1rem;
+    .img {
+      animation: slide-down 0.5s ease;
+    }
+    .form {
+      width: 50%;
+      padding: 1.5rem;
+      animation: slide-up 0.5s ease;
+      background-color:#fff;
+      border-radius: 0 1rem 1rem 0;
+      h2 {
+        text-align: center;
+      }
+      form {
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          display: block;
+          font-size: 1rem;
+          font-weight: 300;
+          color: #54008A;
+          padding: 1rem;
+          margin: 1rem auto;
+          width: 90%;
+          height: 0.8rem;
+          border:none;
+          border-bottom: 2px solid;
+          border-image: linear-gradient(to right, #54008A, rgb(218, 209, 236)) 1;
+          outline: none;
+          background-color: #fff;
+        }
+        button{
+          width: 90%;
+        }
+        .links {
+          display: flex;
+          justify-content: center;
+          margin: 5px 0;
+        }
+  
+        p {
+          text-align: center;
+          margin: 1rem;
+        }
+       
+      }
+      .btnGoogle{
+        margin-top: 1rem;
+        width: 90%;
+        background:linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);
+      }
+      .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+      }
+    }
+    }
+  
+    @keyframes slide-up {
+      0% {
+        transform: translateY(-5rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes slide-down {
+      0% {
+        transform: translateY(5rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .card{
+    display: block;
+    background-color: #EAEAE8!important;
+    .img {
+display: none;
+    }
+    .form {
+    width: 70%!important;
+    margin-left: 15%;
+    margin-right:15%;
+    border-radius: 1rem!important;
+    }
+
+  }
+  }

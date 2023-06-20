@@ -1,0 +1,38 @@
+.pagination {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .hidden {
+      display: none;
+    }
+  
+    li {
+      font-size: 1rem;
+      border: 1px solid rgb(218, 209, 236);
+      min-width: 1.8rem;
+      height: 1.8rem;
+      padding: 3px;
+      margin: 1px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    p {
+      margin-left: 1rem;
+      .page {
+        color: #54008A;
+      }
+    }
+  }
+  .active {
+    background-color: rgb(218, 209, 236);
+    color: #fff;
+    
+  }

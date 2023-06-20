@@ -1,0 +1,72 @@
+.addNews {
+    width: auto;
+    min-height: 80vh;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card {
+width: 70vw;
+background-color: #EAEAE8;
+border-radius: 1rem;
+padding: 1rem;
+    form {
+      label {
+        display: block;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      input[type="text"],
+      input[type="file"],
+      select,
+      textarea {
+        display: block;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 1rem;
+        margin: 1rem auto;
+        width: 90%;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        outline: none;
+        color: gray;
+        background-color: #fff;
+      }
+      .progress {
+        margin-left: 42px;
+        width: 92%;
+        background-color: #fff;
+        border-radius: 5px;
+        .progress-bar {
+          background-color: rgb(151,120,209);
+          border-radius: 5px;
+          color: #aaa;
+          font-size: 1rem;
+          font-weight: 500;
+          padding: 5px;
+        }
+      }
+    }
+}
+  }
+
+  @media screen and (max-width: 800px) {
+    .addNews {
+        padding: 2px;
+        margin: 2px;
+       
+        .card{
+            padding: 0;
+            form {
+            .progress {
+                margin-left: 7px;
+                width: 95%;
+            }
+        }
+    }
+    }
+  }
